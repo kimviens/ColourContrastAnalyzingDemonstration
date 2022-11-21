@@ -16,9 +16,12 @@ body {
   margin: 0;
   background-color: #e7f4e4 !important;
 }
-.font-size-lg {
+.font-size-b-lg {
   font-size: 18.5px;
   font-weight: bold;
+}
+.font-size-lg {
+  font-size: 18.5px;
 }
 .font-size-x-lg {
   font-size: 24px;
@@ -565,6 +568,7 @@ th {
   content: "\e085";
 }
 .glyphicon-info-sign:before {
+  color: #2aabd2;
   content: "\e086";
 }
 .glyphicon-screenshot:before {
@@ -2686,7 +2690,7 @@ fieldset[disabled] .checkbox label {
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-top: 4px \9;
-  margin-left: -20px;
+  margin-left: 0px;
 }
 .radio + .radio,
 .checkbox + .checkbox {
@@ -2701,6 +2705,43 @@ fieldset[disabled] .checkbox label {
   font-weight: 400;
   vertical-align: middle;
   cursor: pointer;
+}
+.radio-inline > legend {
+  font-weight: bold;
+  border: none;
+}
+label {
+  padding-left: 20px;
+}
+fieldset {
+  border: 1px solid black;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  visibility: visible;
 }
 .radio-inline.disabled,
 .checkbox-inline.disabled,
@@ -5024,6 +5065,12 @@ a.thumbnail.active {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-explanation {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid black;
   border-radius: 4px;
 }
 .alert h4 {
