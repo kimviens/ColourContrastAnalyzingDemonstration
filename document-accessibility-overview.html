@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Accessibility - Colour Contrast Analyser Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+</head>
+<body>
+<div class="container-fluid" style="background-color: #e7f4e4 !important;">
+    <a href="#welcome" class="skiplink font-size-lg">Skip to main content</a>
+    <nav class="navbar navbar-default font-size-lg" style="margin-top: 20px">
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-left: 15px;">
+                <button type="button" style="float: left;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span>Menu</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">Simple Demo </a></li>
+                    <li class="active"><a href="document-accessibility-overview.html">Document Accessibility Demo<span class="sr-only">(current)</span></a></li>
+                    <li><a href="detailed-overview.html">Detailed Accessibility Demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 id="welcome">Document Accessibility Demo</h1>
+    </header>
+    <section aria-labelledby="normal-sized-text">
+        <h2 id="normal-sized-text">Normal Sized Text</h2>
+        <section aria-labelledby="ex1-norm-size">
+            <!-- <a href="#ex1-norm-size" aria-label="Link to example 1" title="Link to example 1">X</a> TESTING -->
+            <h3 id="ex1-norm-size">Example 1: Black text on blue background</h3>
+            <p style="background-color: #2aabd2; color: black;">This is example text. This is example text. This is example text. This is example text.</p>
+        </section>
+        <section aria-labelledby="ex2-norm-size">
+            <h3 id="ex2-norm-size">Example 2: White text on blue background</h3>
+            <p style="background-color: #2aabd2; color: white;">This is example text. This is example text. This is example text. This is example text.</p>
+        </section>
+    </section>
+    <section aria-labelledby="large-sized-text">
+        <h2 id="large-sized-text">Large Sized Text</h2>
+        <section aria-labelledby="ex5-larg-size">
+            <h3 id="ex5-larg-size">Example 3: Large sized text - Blue text on pink background </h3>
+            <p class="font-size-x-lg" style="background-color: #ffa0be; color: #3f4f59;">This is example text. This is example text. This is example text. This is example text.</p>
+        </section>
+    </section>
+    <section aria-labelledby="trick-question">
+        <h2 id="trick-question">Trick Question</h2>
+        <section aria-labelledby="ex7-trick">
+            <h3 id="ex7-trick">Example 4: Pale beige text on dark green background</h3>
+            <p style="background-color: #757043; color: #FAF0DB;">This is example text. This is example text. This is example text. This is example text.</p>
+        </section>
+    </section>
+    <section aria-labelledby="non-text-contrast-basics">
+        <h2 id="non-text-contrast-basics">Non-Textual Content</h2>
+        <section aria-labelledby="ex1-non-text">
+            <!-- <a href="#ex1-non-text" aria-label="Link to example 1" title="Link to example 1">X</a> TESTING -->
+            <h3 id="ex1-non-text">Example 5: Graphical icon - Exclamation icon used to signify a problem</h3>
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <span style="color: #853e38">Email address</span>
+            </div>
+        </section>
+    </section>
+    <footer style="margin-top: 20px;">
+        <hr aria-hidden="true" style="height: 1px; background-color: #ccc; border: none;">
+        <a href="#welcome">↑ Link to the top of the page</a>
+    </footer>
+</div>
+</body>
+</html>

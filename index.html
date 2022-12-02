@@ -3,130 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Colour Contrast Analyser Demo</title>
+    <title>Simple - Colour Contrast Analyser Demo</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
 
 </head>
 <body>
 <div class="container-fluid" style="background-color: #e7f4e4 !important;">
+    <a href="#welcome" class="skiplink font-size-lg">Skip to main content</a>
+    <nav class="navbar navbar-default font-size-lg" style="margin-top: 20px">
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-left: 15px;">
+                <button type="button" style="float: left;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span>Menu</span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="index.html">Simple Demo <span class="sr-only">(current)</span></a></li>
+                    <li><a href="document-accessibility-overview.html">Document Accessibility Demo</a></li>
+                    <li><a href="detailed-overview.html">Detailed Accessibility Demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header>
-        <h1 id="welcome">Welcome to the demonstration page for the Colour Contrast Analyser</h1>
-        <p class="lead" style="margin-top: 20px;">This page was made to show how to use contrast analysing tools for accessibility.</p>
-        <p class="font-size-lg">This page fails the following WCAG 2.1 criteria when it comes to contrast: </p>
-        <ul class="font-size-lg">
-            <li><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a></li>
-            <li><a href="https://www.w3.org/TR/WCAG21/#contrast-enhanced">1.4.6 Contrast (Enhanced)</a></li>
-            <li><a href="https://www.w3.org/TR/WCAG21/#visual-presentation">1.4.8 Visual Presentation</a></li>
-            <li><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non-text Contrast</a></li>
-            <li><a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
-        </ul>
+        <h1 id="welcome">Simple Demo</h1>
     </header>
     <section aria-labelledby="text-contrast-basics">
-        <h2 id="text-contrast-basics">Text Contrast Basics</h2>
-        <h3>Explanation: </h3>
-            <div class="alert-explanation font-size-lg">
-                <p>To pass the minimum requirements for text contrast:</p>
-                <ul>
-                    <li>regular sized text should have a contrast of 4.5:1 against its background</li>
-                    <li>large scale text (at least 18pt / 24px or if bold 14pt / 18.5px)</li>
-                </ul>
-                <p>Exception:</p>
-                <ul>
-                    <li>decorative text</li>
-                </ul>
-            </div>
-        <section aria-labelledby="ex1-norm-size">
-            <!-- <a href="#ex1-norm-size" aria-label="Link to example 1" title="Link to example 1">X</a> TESTING -->
-            <h3 id="ex1-norm-size">Example 1: Normal sized text - Black text on blue background</h3>
-            <p style="background-color: #2aabd2; color: black;">Quisque viverra scelerisque nibh sed finibus. Donec pellentesque eget ligula eget finibus. Donec eget molestie erat, vel lacinia justo. Curabitur vulputate rutrum sapien, non tincidunt risus aliquam cursus.</p>
-        </section>
-        <section aria-labelledby="ex2-norm-size">
-            <h3 id="ex2-norm-size">Example 2: Normal sized text - White text on blue background</h3>
-            <p style="background-color: #2aabd2; color: white;">Mauris eu finibus enim, quis facilisis nibh. Cras in posuere risus. Nunc condimentum et metus a elementum. Sed at sagittis risus. Aliquam blandit volutpat fringilla.</p>
-        </section>
-        <section aria-labelledby="ex3-norm-size">
-            <h3 id="ex3-norm-size">Example 3: Normal sized text - Blue text on red background</h3>
-            <p style="background-color: #820E07; color: #D8F3FF;">Morbi malesuada viverra ligula, ut placerat mi auctor in. In sed egestas purus. Nullam in egestas mi. Proin sed mauris arcu. Nullam feugiat tellus efficitur, consequat leo sit amet, vulputate sapien. Praesent tincidunt sollicitudin dolor in dignissim.</p>
-        </section>
-        <section aria-labelledby="ex4-larg-size">
-            <h3 id="ex4-larg-size">Example 4: Large sized text - Purple text on green background</h3>
-            <p class="font-size-b-lg" style="color: #503c5a;">Praesent mollis ligula consectetur, vestibulum justo nec, vulputate purus. Suspendisse sed fringilla mauris. Morbi vehicula ante eu ornare consectetur.</p>
-        </section>
-        <section aria-labelledby="ex5-larg-size">
-            <h3 id="ex5-larg-size">Example 5: Large sized text - Blue text on pink background </h3>
-            <p class="font-size-x-lg" style="background-color: #ffa0be; color: #3f4f59;">Integer sodales ultrices massa sit amet tempus. Sed porta molestie ante, luctus ultricies eros vehicula at.</p>
-        </section>
-        <section aria-labelledby="ex6-larg-size">
-            <h3 id="ex6-larg-size">Example 6: Large sized text</h3>
-            <p class="font-size-b-lg strokes" style="background-color: #FDFF00; color: #F6BE00;">Aenean sem augue, luctus a elementum tincidunt, vestibulum eget tellus. Etiam finibus id massa ut dignissim.</p>
-        </section>
-        <section aria-labelledby="ex7-trick">
-            <h3 id="ex7-trick">Example 7: Trick question</h3>
-            <p style="background-color: #757043; color: #FAF0DB;">In gravida, odio at interdum gravida, mauris augue efficitur sapien, vel sollicitudin lectus elit quis massa. Vivamus tempor, est a ornare fringilla, magna sapien scelerisque ligula.</p>
-        </section>
+        <h2 id="text-contrast-basics">Test the text below!</h2>
+        <p style="background-color: #2aabd2; color: black;">This is example text with font size of 14 pixels. The background colour is blue and the font colour is black. What is the contrast ratio?</p>
     </section>
-    <section aria-labelledby="non-text-contrast-basics">
-        <h2 id="non-text-contrast-basics">Non-Text Contrast Basics</h2>
-        <h3>Explanation: </h3>
-        <div class="alert-explanation font-size-lg">
-            <p >To pass the minimum requirements for non-text contrast:</p>
-            <ul>
-                <li>all parts necessary to understand the user interface component or graphical object must have a contrast ratio of at least 3:1 against adjacent colours</li>
-            </ul>
-            <p>Exception:</p>
-            <ul>
-                <li>decorative non-textual elements</li>
-            </ul>
-        </div>
-        <section aria-labelledby="ex1-non-text">
-            <!-- <a href="#ex1-non-text" aria-label="Link to example 1" title="Link to example 1">X</a> TESTING -->
-            <h3 id="ex1-non-text">Example 1: Graphical icon - Exclamation icon used to signify a problem</h3>
-            <div class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                <span style="color: #853e38">Email address</span>
-            </div>
-        </section>
-        <section aria-labelledby="ex2-non-text">
-            <h3 id="ex2-non-text">Example 2: Graphical icon - Home icon used instead of the word "home"</h3>
-            <div class="font-size-lg">
-               Do you miss being at <span class="glyphicon glyphicon-home" style="color: darkseagreen" aria-label="home"></span> ?
-            </div>
-        </section>
-        <section aria-labelledby="ex3-input">
-            <h3 id="ex3-input">Example 3: Input component - Radio buttons</h3>
-            <fieldset class="radio-inline">
-                <legend>Which is the most accessible publishing format?</legend>
-                <div>
-                    <input type="radio" name="format" id="txt" value="txt" checked>
-                    <label for="txt">Text file</label>
-                </div>
-                <div>
-                    <input type="radio" name="format" id="csv" value="csv">
-                    <label for="csv">CSV file</label>
-                </div>
-                <div>
-                    <input type="radio" name="format" id="html" value="html">
-                    <label for="html">HTML file</label>
-                </div>
-                <div>
-                    <input type="radio" name="format" id="word" value="word">
-                    <label for="word">Word file</label>
-                </div>
-            </fieldset>
-        </section>
-        <section aria-labelledby="ex4-dis-button">
-            <!-- <a href="#ex1-non-text" aria-label="Link to example 1" title="Link to example 1">X</a> TESTING -->
-            <h3 id="ex4-dis-button">Example 4: Input component - Disabled button</h3>
-            <button type="button" class="btn btn-default btn-lg" disabled="disabled">Try not to use me!</button>
-        </section>
-    </section>
-    <footer style="margin-top: 20px;">
-        <hr aria-hidden="true" style="height: 1px; background-color: #ccc; border: none;">
-        <a href="#welcome">↑ Link to the top of the page</a>
-    </footer>
 </div>
 </body>
 </html>

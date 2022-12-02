@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   background-color: #e7f4e4 !important;
+  max-width: 1280px;
 }
 .font-size-b-lg {
   font-size: 18.5px;
@@ -25,6 +26,22 @@ body {
 }
 .font-size-x-lg {
   font-size: 24px;
+}
+.skiplink {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  padding: 10px;
+  background-color: yellow;
+}
+.skiplink:focus {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin-top: 10px;
 }
 .strokes {
   -webkit-text-fill-color: #F6BE00;
@@ -1179,12 +1196,14 @@ hr {
 }
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
-  position: static;
+  position: absolute;
+  top: 10px;
   width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   clip: auto;
+  z-index: 1000;
 }
 [role="button"] {
   cursor: pointer;
